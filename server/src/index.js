@@ -15,7 +15,8 @@ const initiateServer = async () => {
 
   await mongoose.connect("mongodb://localhost:27017/testing", {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
   });
 
   app.listen({ port: 4000 }, () =>
